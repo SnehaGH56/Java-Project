@@ -1,4 +1,4 @@
-# 🏦 Banking System - Java Project
+# 🏦 Premium Banking System - Java Project
 
 <div align="center">
 
