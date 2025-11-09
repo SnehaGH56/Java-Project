@@ -22,15 +22,15 @@ public class SimpleMain {
             Account account = bankingService.openAccount("12345", "John Doe", "SAVINGS");
             database.storeAccount(account);
 
-            System.out.println("Depositing $1000...");
+            System.out.println("Depositing ₹1000...");
             bankingService.deposit("12345", 1000);
-            database.logTransaction("DEPOSIT: $1000 to account 12345");
+            database.logTransaction("DEPOSIT: ₹1000 to account 12345");
 
-            System.out.println("Withdrawing $200...");
+            System.out.println("Withdrawing ₹200...");
             bankingService.withdraw("12345", 200);
-            database.logTransaction("WITHDRAWAL: $200 from account 12345");
+            database.logTransaction("WITHDRAWAL: ₹200 from account 12345");
 
-            System.out.println("Current balance: $" + bankingService.getBalance("12345"));
+            System.out.println("Current balance: ₹" + bankingService.getBalance("12345"));
             System.out.println();
 
             System.out.println("=== SYSTEM INTEGRATION SUCCESSFUL ===");

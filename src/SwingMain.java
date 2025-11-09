@@ -76,7 +76,7 @@ public class SwingMain extends JFrame {
         try {
             double amount = Double.parseDouble(amountField.getText());
             bankingService.deposit(accountField.getText(), amount);
-            resultArea.append("Deposited: $" + amount + "\n");
+            resultArea.append("Deposited: ₹" + amount + "\n");
         } catch (Exception e) {
             resultArea.append("Error: " + e.getMessage() + "\n");
         }
@@ -94,12 +94,12 @@ public class SwingMain extends JFrame {
                 return;
             }
             if (amount > currentBalance) {
-                resultArea.append("Error: Insufficient funds. Balance: $" + currentBalance + "\n");
+                resultArea.append("Error: Insufficient funds. Balance: ₹" + currentBalance + "\n");
                 return;
             }
             
             bankingService.withdraw(accountNum, amount);
-            resultArea.append("Withdrawn: $" + amount + " | New Balance: $" + bankingService.getBalance(accountNum) + "\n");
+            resultArea.append("Withdrawn: ₹" + amount + " | New Balance: ₹" + bankingService.getBalance(accountNum) + "\n");
         } catch (Exception e) {
             resultArea.append("Error: " + e.getMessage() + "\n");
         }
@@ -108,7 +108,7 @@ public class SwingMain extends JFrame {
     private void checkBalance() {
         try {
             double balance = bankingService.getBalance(accountField.getText());
-            resultArea.append("Balance: $" + balance + "\n");
+            resultArea.append("Balance: ₹" + balance + "\n");
         } catch (Exception e) {
             resultArea.append("Error: " + e.getMessage() + "\n");
         }

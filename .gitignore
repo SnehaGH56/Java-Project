@@ -1,0 +1,12 @@
+# Ignore compiled Java class files and build output
+/out/
+*.class
+
+# IDE/editor files
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
